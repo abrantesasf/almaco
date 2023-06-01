@@ -1,0 +1,82 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modelo para documentação de LABS, PSETS, etc.
+%
+% Por: Abrantes Araújo Silva Filho
+%      abrantesasf@gmail.com
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Classe do documento
+\documentclass[12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Preâmbulo com todas as outras outras chamadas para todos os outros packages
+%%% e o que mais for necessário
+\input{utils/preambulo.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Ajuste do layout, espaçamento de linhas e etc.:
+\geometry{a4paper, portrait, twoside, %left=1.5in, hmarginratio=2:3,
+bindingoffset=0in}
+%\onehalfspacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Configurações para as propriedades do PDF:
+\hypersetup{
+   hidelinks,           % Comente para web, descomente para impressão
+   colorlinks=true,    % True para web, False para impressão
+   pdftitle={Uso do papel almaço},
+   pdfauthor={Abrantes Araújo Silva Filho},
+   pdfsubject={Escrita de trabalhos acadêmicos},
+   pdfkeywords={almaço, manuscrito},
+   pdfinfo={
+      CreationDate={}, % Ex.: D:AAAAMMDDHH24MISS
+      ModDate={}       % Ex.: D:AAAAMMDDHH24MISS
+   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Compilação condicional de capítulos
+%\includeonly{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Começa o documento
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Front matter
+\pdfbookmark[1]{Uso do papel almaço}{titulo}
+\title{\textbf{Uso do papel almaço}}
+\author{Abrantes Araújo Silva Filho}
+\date{2023-05-31}
+\maketitle
+\renewcommand{\abstractname}{\textbf{Resumo}}
+\abstract{\noindent Aprenda a usar corretamente o papal almaço para fazer seus
+trabalhos acadêmicos de forma manuscrita. Muitos alunos começam o ensino
+superior sem nunca ter utilizado papel almaço em seus trabalhos acadêmicos e,
+por incrível que pareça, quando solicitados a entregar um trabalho manuscrito
+com esse tipo de papel, cometem erros básicos como escrever com o papel de
+cabeça para baixo, escrever de trás para frente, cortar as folhas, rasurar e
+amassar o papel. Este pequeno texto é um ``guia de uso'' do papel almaço.}
+%\pdfbookmark[1]{Sumário}{sumario}
+%\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Main matter
+%\newpage
+\input{main/texto}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Apêndices
+%\newpage
+%\appendix
+%\input{apend/xxxx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Back matter
+\bibliography{utils/biblioteca}
+%\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Termina o documento
+\end{document}
